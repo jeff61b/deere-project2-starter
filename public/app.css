@@ -1,0 +1,43 @@
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+body {
+  display: flex;
+  font-size: large;
+  flex-direction: column;
+  background-color: lemonchiffon;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#sign_up_link {
+  font-size: x-large;
+
+  justify-content: center;
+  margin: 15px 15px 15px 15px;
+  background-color: lemonchiffon;
+}
+#log_in_link {
+  font-size: x-large;
+
+  margin: 15px 15px 15px 15px;
+}
+#logout {
+  font-size: x-large;
+  margin: 15px 15px 15px 15px;
+}
+
+.submit {
+  font-size: large;
+}
