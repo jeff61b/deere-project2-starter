@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia App</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+
+  <body>
+    <h1>Trivia Question Show Page</h1>
+    <%=trivia.question %> 
+    <%=trivia.answer1 %> 
+    <%=trivia.answer2 %>
+    <%=trivia.answer3 %> 
+    <%=trivia.answer4 %> 
+    <%=trivia.correctAnswer %>
+    <%=trivia.categoryId %>  
+    <a href="/categories/<%=trivia.Categories.id%>"><%=trivia.Categories.name%></a>
+
+  </li>
+    <br />
+    <% } %>
+    <form action="/trivia/<%=trivia.id %>?_method=DELETE" method="POST">
+      <input type="submit" value="DELETE <%= trivia.question %>" />
+    </form>
+  </body>
+</html>

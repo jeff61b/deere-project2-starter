@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+
+  <body>
+    <h1>Trivia Database</h1>
+    <h2>Add New Trivia Question</h2>
+    <h3>Using the user sign up as a model</h3>
+
+    <form action="/auth/signup" method="POST">
+      Question: <input type="text" name="question" /><br />
+      <br />
+      Answer1: <input type="text" name="answer1" /> <br />
+      <br />
+      Answer2: <input type="text" name="answer2" /> <br />
+      <br />
+      Answer3: <input type="text" name="answer3" /> <br />
+      <br />
+      Answer4: <input type="text" name="answer4" /> <br />
+      <br />
+      Correct Answer Number: <input type="number" name="answer" /><br />
+      <br />
+      Placeholder for category dropdown:
+      <input type="number" name="categoryId" /><br />
+      <br />
+      <input class="submit" type="submit" value="Add" />
+    </form>
+  </body>
+</html>

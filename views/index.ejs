@@ -1,0 +1,39 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/app.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Trivia Database</h1>
+    <ul class="trivia">
+        <div name="triviaDiv">
+           <% for (let i = 0; i < trivia.length; i++) { %>
+           <div">
+               <li id="question">
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].question %></a>
+               </li>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer1 %></a>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer2 %></a>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer3 %></a>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer4 %></a>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].correctAnswer %></a>
+                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].categoryId %></a>
+               <div id="edit">
+                   <form action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">
+                       <input id="delButton" type="submit" value="Delete" />
+                   </form>
+                   <a id="editButton" href="/trivia/<%=trivia[i].id%>/edit">Edit</a>
+               </div>
+                <br /><br />
+                <% } %>
+            </div>
+    </ul>
+    </div>
+</body>
+
+</html>

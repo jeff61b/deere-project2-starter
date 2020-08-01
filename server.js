@@ -22,18 +22,20 @@ const verifyToken = (req, res, next) => {
     next();
   });
 };
-
+// Middleware
+app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));
+
+app.use("/auth", require("./controllers/authController.js"));
+app.use("/trivia", require("./controllers/triviaController.js"));
+app.use("/users", require("./controllers/usersController.js"));
 
 // HOMEPAGE
 app.get("/", (req, res) => {
   res.render("users/index.ejs");
 });
-
-app.use("/auth", require("./controllers/authController.js"));
-app.use("/users", require("./controllers/usersController.js"));
 
 app.listen(process.env.PORT, () => {
   console.log("Nodemon listening");
