@@ -15,11 +15,11 @@
       Answer 1:
       <input type="text" name="answer1" value="<%=trivia.answer1%>" /><br />
       Answer 2:
-      <input type="text" name="answer2" value="<%=trivia.answer1%>" /><br />
+      <input type="text" name="answer2" value="<%=trivia.answer2%>" /><br />
       Answer 3:
-      <input type="text" name="answer3" value="<%=trivia.answer1%>" /><br />
+      <input type="text" name="answer3" value="<%=trivia.answer3%>" /><br />
       Answer 4:
-      <input type="text" name="answer4" value="<%=trivia.answer1%>" /><br />
+      <input type="text" name="answer4" value="<%=trivia.answer4%>" /><br />
       Correct Answer:
       <input
         type="number"
@@ -27,8 +27,8 @@
         value="<%=trivia.correctAnswer%>"
       /><br />
       <select name="category">
-        <% for ( let i = 0; i < categories.length; i++ ) { let selected = ( i ==
-        0 ) ? "selected" : ""; %>
+        Category: <% for ( let i = 0; i < categories.length; i++ ) { let
+        selected = ( i == 0 ) ? "selected" : ""; %>
         <option value="<%=categories[i].id%>" selected
           ><%=categories[i].name%>
         </option>

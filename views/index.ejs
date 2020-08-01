@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,13 +15,12 @@
            <% for (let i = 0; i < trivia.length; i++) { %>
            <div">
                <li id="question">
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].question %></a>
-               </li>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer1 %></a>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer2 %></a>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer3 %></a>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].answer4 %></a>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].correctAnswer %></a>
+                   <a href="/trivia/<%= trivia[i].id%>">Question:  -   <%= trivia[i].question %></a> <br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 1:  -   <%= trivia[i].answer1 %></a> <br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 2:  -   <%= trivia[i].answer2 %></a><br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 3:  -   <%= trivia[i].answer3 %></a><br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 4:  -   <%= trivia[i].answer4 %></a><br>
+                   <a href="/trivia/<%= trivia[i].id%>">Correct Answer:  -   <%= trivia[i].correctAnswer %></a><br>
                    <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].categoryId %></a>
                <div id="edit">
                    <form action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">

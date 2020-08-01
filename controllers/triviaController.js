@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models").User;
 const Category = require("../models").Category;
-const TriviaModel = require("../models").Trivia;
+const TriviaModel = require("../models").TriviaQuestions;
 
 // New route - send empty form
 router.get("/new", (req, res) => {
