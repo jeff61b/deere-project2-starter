@@ -1,8 +1,36 @@
 h1 {
   text-align: center;
+  color: blue;
 }
 h2 {
   text-align: center;
+}
+
+#addform {
+  text-align: center;
+  width: 100%;
+  font-size: larger;
+}
+jtb {
+  text-indent: 100px;
+}
+input[type="text"] {
+  width: 500px;
+}
+#add1 {
+  text-indent: 100px;
+}
+
+#answerform {
+  text-align: left;
+  width: 400px;
+  font-size: larger;
+  text-indent: 100px;
+}
+#myform {
+  display: flex;
+  background-color: lightblue;
+  flex-direction: column;
 }
 
 body {

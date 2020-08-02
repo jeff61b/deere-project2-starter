@@ -10,7 +10,11 @@
 
 <body>
     <h1>Trivia Database</h1>
-    <ul class="trivia">
+    <a id="addButton" href="/trivia/new">Add New Trivia Question</a>
+
+    <a id="logout" href="/auth/logout">Log Out</a>
+        
+    <ol class="trivia">
         <div name="triviaDiv">
            <% for (let i = 0; i < trivia.length; i++) { %>
            <div">

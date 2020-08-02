@@ -9,25 +9,20 @@
   <body>
     <h1>Trivia Database</h1>
     <h2>Add New Trivia Question</h2>
-    <h3>Using the user sign up as a model</h3>
 
-    <form action="/auth/signup" method="POST">
-      Question: <input type="text" name="question" /><br />
-      <br />
-      Answer1: <input type="text" name="answer1" /> <br />
-      <br />
+    <form id="addform" action="/new" method="POST">
+      Question: <input id="addquestion" type="text" name="question" /><br />
+      Answer1: <input id="add1" type="text" name="answer1" /> <br />
       Answer2: <input type="text" name="answer2" /> <br />
-      <br />
       Answer3: <input type="text" name="answer3" /> <br />
-      <br />
       Answer4: <input type="text" name="answer4" /> <br />
-      <br />
-      Correct Answer Number: <input type="number" name="answer" /><br />
+      Correct Answer: <input type="number" name="answer" /><br />
       <br />
       Placeholder for category dropdown:
       <input type="number" name="categoryId" /><br />
       <br />
       <input class="submit" type="submit" value="Add" />
     </form>
+    <a href="/trivia">Return to Trivia Page</a>
   </body>
 </html>
