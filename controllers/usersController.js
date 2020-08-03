@@ -13,3 +13,20 @@ router.get("/profile/:id", (req, res) => {
 });
 
 module.exports = router;
+
+// update the item on the database
+router.put("/profile/:id", (req, res) => {
+  UserModel.update(req.body, {
+    where: { id: req.params.id },
+    returning: true,
+  }).then((user) => {
+    res.redirect(`/users/profile/${req.params.id}`);
+  });
+});
+
+// Delete route for user
+router.delete("/:id", (req, res) => {
+  UserModel.destroy({ where: { id: req.params.id } }).then(() => {
+    res.redirect("/");
+  });
+});

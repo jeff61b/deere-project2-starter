@@ -5,14 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/app.css" />
-    <title>Document</title>
+    <title>Show all Trivia Questions</title>
 </head>
 
 <body>
     <h1>Trivia Database</h1>
-    <a id="addButton" href="/trivia/new">Add New Trivia Question</a>
-
-    <a id="logout" href="/auth/logout">Log Out</a>
+    <nav id="trivianav">
+        <a id="addButton" href="/trivia/new">Add a Question</a>
+        <a id="return" href="/">Return to Login</a>
+        <a id="logout" href="/auth/logout">Log Out</a>
+    </nav>
         
     <ol class="trivia">
         <div name="triviaDiv">
@@ -25,11 +27,12 @@
                    <a href="/trivia/<%= trivia[i].id%>">Answer 3:  -   <%= trivia[i].answer3 %></a><br>
                    <a href="/trivia/<%= trivia[i].id%>">Answer 4:  -   <%= trivia[i].answer4 %></a><br>
                    <a href="/trivia/<%= trivia[i].id%>">Correct Answer:  -   <%= trivia[i].correctAnswer %></a><br>
-                   <a href="/trivia/<%= trivia[i].id%>"><%= trivia[i].categoryId %></a>
+                   <a href="/trivia/<%= trivia[i].id%>">Category:<%= trivia[i].categoryId %></a>
                <div id="edit">
-                   <form action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">
-                       <input id="delButton" type="submit" value="Delete" />
+                   <form id="deleteform" action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">
+                       <input id="delbutton" type="submit" value="Delete" />
                    </form>
+
                    <a id="editButton" href="/trivia/<%=trivia[i].id%>/edit">Edit</a>
                </div>
                 <br /><br />

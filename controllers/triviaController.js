@@ -21,9 +21,18 @@ router.get("/", (req, res) => {
 // Add New Trivia Question
 router.post("/", (req, res) => {
   TriviaModel.create(req.body).then((newQuestion) => {
-    res.redirect("/");
+    console.log("new" + newQuestion);
+    res.redirect("/trivia");
   });
 });
+
+// Add New Trivia Question
+// router.post("/", (req, res) => {
+//   TriviaModel.create(req.body).then((newQuestion) => {
+//     console.log("new" + newQuestion);
+//     res.redirect("/");
+//   });
+// });
 
 // SHOW ROUTE - GET ONE Trivia Question
 router.get("/:id", (req, res) => {
@@ -87,7 +96,7 @@ router.put("/:id", (req, res) => {
     Category.findByPk(req.body.category).then((foundCategory) => {
       TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
         foundQuestion.addCategory(foundCategory);
-        res.redirect("/trivia");
+        res.redirect("/");
       });
     });
   });
