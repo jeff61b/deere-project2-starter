@@ -101,7 +101,7 @@ router.put("/:id", (req, res) => {
     //  Category.findByPk(req.body.categoryId).then((foundCategory) => {
     //    TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
     //      foundQuestion.addCategory(foundCategory);
-    res.redirect("/");
+    res.redirect("/trivia");
   });
   //  });
   //});

@@ -6,36 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/app.css" />
     <title>Show all Trivia Questions</title>
+    <style>
+        div.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 15;
+            width: 100%;
+      
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Trivia Database</h1>
-    <nav id="trivianav">
-        <a id="addButton" href="/trivia/new">Add a Question</a>
-        <a id="return" href="/">Return to Login</a>
-        <a id="logout" href="/auth/logout">Log Out</a>
-    </nav>
-        
+    <div class="fixed" id="topdivision">
+        <h1 id="pagetitle">Trivia Database</h1>
+
+            <nav id="trivianav">
+            <a id="addButton" href="/trivia/new">Add a Question</a>
+            <a id="return" href="/">Return to Login</a>
+            <a id="logout" href="/auth/logout">Log Out</a>
+        </nav>
+    </div>
+    <br>
+    <br>    
     <ol class="trivia">
         <div name="triviaDiv">
            <% for (let i = 0; i < trivia.length; i++) { %>
-           <div">
-               <li id="question">
-                   <a href="/trivia/<%= trivia[i].id%>">Question:  -   <%= trivia[i].question %></a> <br>
-                   <a href="/trivia/<%= trivia[i].id%>">Answer 1:  -   <%= trivia[i].answer1 %></a> <br>
-                   <a href="/trivia/<%= trivia[i].id%>">Answer 2:  -   <%= trivia[i].answer2 %></a><br>
-                   <a href="/trivia/<%= trivia[i].id%>">Answer 3:  -   <%= trivia[i].answer3 %></a><br>
-                   <a href="/trivia/<%= trivia[i].id%>">Answer 4:  -   <%= trivia[i].answer4 %></a><br>
-                   <a href="/trivia/<%= trivia[i].id%>">Correct Answer:  -   <%= trivia[i].correctAnswer %></a><br>
-                   <a href="/trivia/<%= trivia[i].id%>">Category:<%= trivia[i].categoryId %></a>
+           <br> <br>
+            <div">
+            <textarea id="questiontext" rows="2" cols="75">Question: - <%= trivia[i].question %></textarea>
+            <li id="question">
+                   <a href="/trivia/<%= trivia[i].id%>">Question: -  <%= trivia[i].question %></a> <br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 1: -  <%= trivia[i].answer1 %></a> <br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 2: -  <%= trivia[i].answer2 %></a><br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 3: -  <%= trivia[i].answer3 %></a><br>
+                   <a href="/trivia/<%= trivia[i].id%>">Answer 4: -  <%= trivia[i].answer4 %></a><br>
+                   <a id="correct" href="/trivia/<%= trivia[i].id%>">Correct Answer:  -   <%= trivia[i].correctAnswer %></a>
+                   <a id="cat" href="/trivia/<%= trivia[i].id%>">  Category: <%= trivia[i].categoryId %></a>
                <div id="edit">
                    <form id="deleteform" action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">
                        <input id="delbutton" type="submit" value="Delete" />
                    </form>
-
                    <a id="editButton" href="/trivia/<%=trivia[i].id%>/edit">Edit</a>
                </div>
-                <br /><br />
                 <% } %>
             </div>
     </ul>
