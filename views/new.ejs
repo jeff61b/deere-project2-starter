@@ -10,7 +10,7 @@
     <h1>Trivia Database</h1>
     <h2>Add New Trivia Question</h2>
 
-    <form id="addform" action="/new" method="POST">
+    <form id="addform" action="/trivia" method="POST">
       Question: <input id="addquestion" type="text" name="question" /><br />
       Answer1: <input id="add1" type="text" name="answer1" /> <br />
       Answer2: <input type="text" name="answer2" /> <br />
@@ -19,7 +19,15 @@
       Correct Answer: <input type="number" name="answer" /><br />
       <br />
       Placeholder for category dropdown:
-      <input type="number" name="categoryId" /><br />
+      <select type="number" name="categoryId">
+        <%for(let i=0; i < categories.length; i++) { %>
+        <option value="<%=categories[i].id%>">
+          <%=categories[i].name%>
+        </option>
+        <% } %>
+      </select>
+
+      <br />
       <br />
       <input class="submit" type="submit" value="Add" />
     </form>

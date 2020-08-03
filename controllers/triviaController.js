@@ -1,4 +1,5 @@
 const express = require("express");
+const category = require("../models/category");
 const router = express.Router();
 const User = require("../models").User;
 const Category = require("../models").Category;
@@ -6,7 +7,11 @@ const TriviaModel = require("../models").TriviaQuestions;
 
 // New route - send empty form
 router.get("/new", (req, res) => {
-  res.render("new.ejs");
+  Category.findAll().then((allCategories) => {
+    res.render("new.ejs", {
+      categories: allCategories,
+    });
+  });
 });
 
 // index route
@@ -93,13 +98,13 @@ router.put("/:id", (req, res) => {
     where: { id: req.params.id },
     returning: true,
   }).then((updatedTrivia) => {
-    Category.findByPk(req.body.category).then((foundCategory) => {
-      TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
-        foundQuestion.addCategory(foundCategory);
-        res.redirect("/");
-      });
-    });
+    //  Category.findByPk(req.body.categoryId).then((foundCategory) => {
+    //    TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
+    //      foundQuestion.addCategory(foundCategory);
+    res.redirect("/");
   });
+  //  });
+  //});
 });
 
 router.delete("/:id", (req, res) => {
