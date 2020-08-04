@@ -114,8 +114,31 @@ input[type="text"] {
   flex-direction: column;
 }
 #questiontext {
-  font-size: large;
+  font-size: medium;
+  font-weight: bold;
   background-color: rgb(255, 255, 230);
+  border: none;
+  text-align: center;
+}
+.answertext {
+  font-size: medium;
+  font-weight: bold;
+  background-color: rgb(255, 255, 230);
+  border: none;
+  text-align: left;
+  margin-left: 150px;
+}
+#categorybox {
+  font-size: medium;
+}
+#submitchange {
+  font-size: medium;
+}
+#correctsize {
+  width: 50px;
+}
+.editfields {
+  font-size: medium;
 }
 
 #edit-h1 {

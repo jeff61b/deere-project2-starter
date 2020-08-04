@@ -15,22 +15,50 @@
     >
       <!--  NOTE: the form is pre-populated with values for the server-->
       Question:
-      <input type="text" name="question" value="<%=trivia.question%>" /><br />
+      <input
+        class="editfields"
+        type="text"
+        name="question"
+        value="<%=trivia.question%>"
+      /><br />
       Answer 1:
-      <input type="text" name="answer1" value="<%=trivia.answer1%>" /><br />
+      <input
+        class="editfields"
+        type="text"
+        name="answer1"
+        value="<%=trivia.answer1%>"
+      /><br />
       Answer 2:
-      <input type="text" name="answer2" value="<%=trivia.answer2%>" /><br />
+      <input
+        class="editfields"
+        type="text"
+        name="answer2"
+        value="<%=trivia.answer2%>"
+      /><br />
       Answer 3:
-      <input type="text" name="answer3" value="<%=trivia.answer3%>" /><br />
+      <input
+        class="editfields"
+        type="text"
+        name="answer3"
+        value="<%=trivia.answer3%>"
+      /><br />
       Answer 4:
-      <input type="text" name="answer4" value="<%=trivia.answer4%>" /><br />
+      <input
+        class="editfields"
+        type="text"
+        name="answer4"
+        value="<%=trivia.answer4%>"
+      /><br />
       Correct Answer:
       <input
+        id="correctsize"
+        class="editfields"
         type="number"
         name="correctAnswer"
         value="<%=trivia.correctAnswer%>"
-      /><br />
-      <select name="category">
+      />
+      Category:
+      <select id="categorybox" name="category">
         Category: <% for ( let i = 0; i < categories.length; i++ ) { let
         selected = ( i == 0 ) ? "selected" : ""; %>
         <option value="<%=categories[i].id%>" selected
@@ -40,7 +68,7 @@
       </select>
       <br />
 
-      <input type="submit" value="Submit Changes" /> <br />
+      <input id="submitchange" type="submit" value="Submit Changes" /> <br />
       <br />
 
       <a href="/trivia">Return to Main Trivia Page</a>
