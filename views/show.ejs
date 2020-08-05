@@ -9,20 +9,27 @@
 
   <body>
     <h1>Trivia Question Show Page</h1>
-    <%=trivia.question %> 
-    <%=trivia.answer1 %> 
-    <%=trivia.answer2 %>
-    <%=trivia.answer3 %> 
-    <%=trivia.answer4 %> 
-    <%=trivia.correctAnswer %>
-    <%=trivia.categoryId %>  
-    <a href="/categories/<%=trivia.Categories.id%>"><%=trivia.Categories.name%></a>
+
+    <textarea id="questiontext" rows="2" cols="75">Question:  <%= trivia.question %></textarea>
+      <textarea class="answertext" rows="1" cols="75"> Answer 1:  <%= trivia.answer1 %></textarea>
+      <textarea class="answertext" rows="1" cols="75"> Answer 2:  <%= trivia.answer2 %></textarea>
+      <textarea class="answertext" rows="1" cols="75"> Answer 3:  <%= trivia.answer3 %></textarea>
+      <textarea class="answertext" rows="1" cols="75"> Answer 4:  <%= trivia.answer4 %></textarea>
+      <textarea class="answertext" rows="1" cols="75"> Correct Answer:  <%= trivia.correctAnswer %> </textarea>
+      <textarea class="answertext" rows="1" cols="50"> Category: <%= trivia.categoryId %></textarea>
+      <textarea class="answertext" rows="1" cols="50"> Category: <%= categories.name %></textarea>
+            <br>
+    
+    
+    <div id="edit">
+        <a id="editButton" href="/trivia/<%=trivia.id%>/edit">Edit</a>
+        <a id="trivialink" href="/trivia">Return to Trivia Database</a>
+    <form id="deleteform" action="/trivia/<%=trivia.id%>?_method=DELETE" method="POST">
+      <input id="delbutton" type="submit" value="Delete" />
+    </form>
+    </div>
 
   </li>
-    <br />
-    <% } %>
-    <form action="/trivia/<%=trivia.id %>?_method=DELETE" method="POST">
-      <input type="submit" value="DELETE <%= trivia.question %>" />
-    </form>
+
   </body>
 </html>

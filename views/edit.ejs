@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <h1 id="edit-h1">Edit Trivia Question</h1>
+    <h1 id="edit-h1">Edit the Trivia Question</h1>
     <form
       id="editform"
       action="/trivia/<%=trivia.id%>?_method=PUT"
@@ -58,7 +58,7 @@
         value="<%=trivia.correctAnswer%>"
       />
       Category:
-      <select id="categorybox" name="category">
+      <select id="categorybox" name="categoryId">
         Category: <% for ( let i = 0; i < categories.length; i++ ) { let
         selected = ( i == 0 ) ? "selected" : ""; %>
         <option value="<%=categories[i].id%>" selected

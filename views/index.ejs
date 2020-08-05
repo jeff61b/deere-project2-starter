@@ -24,31 +24,26 @@
         <h1 id="pagetitle">Trivia Database</h1>
 
             <nav id="trivianav">
-            <a id="addButton" href="/trivia/new">Add a Question</a>
-            <a id="return" href="/">Return to Login</a>
-            <a id="logout" href="/auth/logout">Log Out</a>
+            <a class="trivialinks" href="/trivia/new">Add a Question</a>
+            <a class="trivialinks" href="/">Return to Login</a>
+            <a class="trivialinks" href="/auth/logout">Log Out</a>
         </nav>
+        <h4 id="instructions">Click on any line to view or update that trivia question.</h4>
     </div>
     <br>
-    <br>    
+    <br>
+    <br>
     <ol class="trivia">
         <div name="triviaDiv">
            <% for (let i = 0; i < trivia.length; i++) { %>
            <br> <br>
             <div">
                 <li id="question">
-            <textarea id="questiontext" rows="1" cols="75">Question:  <%= trivia[i].question %></textarea>
-            <textarea class="answertext" rows="1" cols="75">            Answer 1:  <%= trivia[i].answer1 %></textarea>
-            <textarea class="answertext" rows="1" cols="75">            Answer 2:  <%= trivia[i].answer2 %></textarea>
-            <textarea class="answertext" rows="1" cols="75">            Answer 3:  <%= trivia[i].answer3 %></textarea>
-            <textarea class="answertext" rows="1" cols="75">            Answer 4:  <%= trivia[i].answer4 %></textarea>
-            <textarea class="answertext" rows="1" cols="75">           Correct Answer:  <%= trivia[i].correctAnswer %>       Category: <%= trivia[i].categoryId %></textarea> <br>
-
+            
                <div id="edit">
-                   <form id="deleteform" action="/trivia/<%=trivia[i].id%>?_method=DELETE" method="POST">
-                       <input id="delbutton" type="submit" value="Delete" />
-                   </form>
-                   <a id="editButton" href="/trivia/<%=trivia[i].id%>/edit">Edit</a>
+                   
+                    <a id="showButton" href="/trivia/<%=trivia[i].id%>"><%=trivia[i].question%></a> 
+                
                </div>
                 <% } %>
             </div>
