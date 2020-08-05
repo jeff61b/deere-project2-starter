@@ -8,7 +8,9 @@
   </head>
 
   <body>
-    <h1>Trivia Question Show Page</h1>
+    <div class="edit-h1">
+      <h1 >Trivia Question Show Page</h1>
+    </div>
 
     <textarea id="questiontext" rows="2" cols="75">Question:  <%= trivia.question %></textarea>
       <textarea class="answertext" rows="1" cols="75"> Answer 1:  <%= trivia.answer1 %></textarea>
@@ -23,7 +25,7 @@
     
     <div id="editshow">
         <a class="trivialinks" href="/trivia/<%=trivia.id%>/edit">Edit</a>
-        <a class="trivialinks" href="/trivia">Return to Trivia Database</a>
+        <a class="trivialinks" href="/trivia">Return to Main Trivia Page</a>
     <form class="trivialinks" action="/trivia/<%=trivia.id%>?_method=DELETE" method="POST">
       <input class="trivialinks" type="submit" value="Delete" />
     </form>

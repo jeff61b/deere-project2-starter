@@ -11,15 +11,27 @@
     <h2>Add New Trivia Question</h2>
 
     <form id="addform" action="/trivia" method="POST">
-      Question: <input id="addquestion" type="text" name="question" /><br />
-      Answer1: <input id="add1" type="text" name="answer1" /> <br />
-      Answer2: <input type="text" name="answer2" /> <br />
-      Answer3: <input type="text" name="answer3" /> <br />
-      Answer4: <input type="text" name="answer4" /> <br />
-      Correct Answer: <input type="number" name="correctAnswer" /><br />
+      Question:
+      <input
+        class="editfields"
+        id="addquestion"
+        type="text"
+        name="question"
+      /><br />
+      Answer1: <input class="editfields" type="text" name="answer1" /> <br />
+      Answer2: <input class="editfields" type="text" name="answer2" /> <br />
+      Answer3: <input class="editfields" type="text" name="answer3" /> <br />
+      Answer4: <input class="editfields" type="text" name="answer4" /> <br />
+      Correct Answer:
+      <input
+        id="correctsize"
+        class="editfields"
+        type="number"
+        name="correctAnswer"
+      /><br />
       <br />
       Category:
-      <select type="number" name="categoryId">
+      <select type="number" name="categoryId" class="editfields">
         <%for(let i=0; i < categories.length; i++) { %>
         <option value="<%=categories[i].id%>">
           <%=categories[i].name%>
@@ -33,7 +45,7 @@
     </form>
     <br />
     <div id="addLinks">
-      <a class="trivialinks" href="/trivia">Return to Trivia Page</a>
+      <a class="trivialinks" href="/trivia">Return to Main Trivia Page</a>
     </div>
   </body>
 </html>

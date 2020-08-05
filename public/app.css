@@ -166,9 +166,6 @@ ol {
 input[type="text"] {
   width: 500px;
 }
-#add1 {
-  text-indent: 100px;
-}
 
 #answerform {
   text-align: left;
@@ -189,6 +186,8 @@ input[type="text"] {
   background-color: rgb(255, 255, 230);
   border: none;
   text-align: center;
+  margin-left: 55px;
+  margin-right: 55px;
 }
 
 .answertext {
@@ -218,10 +217,10 @@ input[type="text"] {
 }
 
 .editfields {
-  font-size: x-large;
+  font-size: large;
 }
 
-#edit-h1 {
+.edit-h1 {
   display: flex;
   background-color: lemonchiffon;
   height: 80px;
