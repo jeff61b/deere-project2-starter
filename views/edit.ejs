@@ -51,18 +51,31 @@
       /><br />
       Correct Answer:
       <input
+        class="editfields"
         id="correctsize"
         class="editfields"
         type="number"
         name="correctAnswer"
         value="<%=trivia.correctAnswer%>"
-      />
-      Category:
+      /><br />
+
+      <!-- Category:
+  <input
+  id="correctsize"  
+  class="editfields"
+  type="number"
+  name="correctAnswer"
+  value="<%=trivia.categoryId%>"
+/>
+-->
+
+      Select a Category:
       <select id="categorybox" name="categoryId">
         Category: <% for ( let i = 0; i < categories.length; i++ ) { let
-        selected = ( i == 0 ) ? "selected" : ""; %>
-        <option value="<%=categories.id%>" selected
-          ><%=categories[i].name%>
+        selected = ( categories[i].id == trivia.categoryId ) ? "selected" : "";
+        %>
+        <option value="<%=categories[i].id%>" selected
+          ><%=categories[i].id + " - " + categories[i].name%>
         </option>
         <% } %>
       </select>

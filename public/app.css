@@ -18,15 +18,18 @@ h2 {
 .trivia {
   text-align: center;
   background-color: rgb(1, 1, 75);
+  background-color: rgb(255, 255, 230);
 }
 
 #triviadiv {
   background-color: rgb(1, 1, 75);
+  background-color: rgb(255, 255, 230);
 }
 
 #question {
   margin: 1px 100px 1px 100px;
   background-color: rgb(1, 1, 75);
+  background-color: rgb(255, 255, 230);
 }
 
 #edit {
@@ -36,6 +39,7 @@ h2 {
   align-items: baseline;
   font-size: x-large;
   background-color: rgb(1, 1, 75);
+  background-color: rgb(255, 255, 230);
 }
 
 #editshow {
@@ -48,8 +52,9 @@ h2 {
 }
 
 #showButton {
-  color: white;
+  color: black;
   background-color: rgb(1, 1, 75);
+  background-color: rgb(255, 255, 230);
 }
 
 #correct {
@@ -133,7 +138,7 @@ h2 {
 }
 
 ol {
-  color: lightyellow;
+  color: darkblue;
   font-size: larger;
 }
 
@@ -197,6 +202,7 @@ input[type="text"] {
 
 #categorybox {
   font-size: medium;
+  font-style: italic;
 }
 
 #submitchange {
