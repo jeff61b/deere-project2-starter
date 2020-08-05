@@ -16,16 +16,16 @@
       <textarea class="answertext" rows="1" cols="75"> Answer 3:  <%= trivia.answer3 %></textarea>
       <textarea class="answertext" rows="1" cols="75"> Answer 4:  <%= trivia.answer4 %></textarea>
       <textarea class="answertext" rows="1" cols="75"> Correct Answer:  <%= trivia.correctAnswer %> </textarea>
-      <textarea class="answertext" rows="1" cols="50"> Category: <%= trivia.categoryId %></textarea>
+      
       <textarea class="answertext" rows="1" cols="50"> Category: <%= categories.name %></textarea>
             <br>
     
     
-    <div id="edit">
-        <a id="editButton" href="/trivia/<%=trivia.id%>/edit">Edit</a>
-        <a id="trivialink" href="/trivia">Return to Trivia Database</a>
-    <form id="deleteform" action="/trivia/<%=trivia.id%>?_method=DELETE" method="POST">
-      <input id="delbutton" type="submit" value="Delete" />
+    <div id="editshow">
+        <a class="trivialinks" href="/trivia/<%=trivia.id%>/edit">Edit</a>
+        <a class="trivialinks" href="/trivia">Return to Trivia Database</a>
+    <form class="trivialinks" action="/trivia/<%=trivia.id%>?_method=DELETE" method="POST">
+      <input class="trivialinks" type="submit" value="Delete" />
     </form>
     </div>
 

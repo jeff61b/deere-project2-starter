@@ -61,17 +61,18 @@
       <select id="categorybox" name="categoryId">
         Category: <% for ( let i = 0; i < categories.length; i++ ) { let
         selected = ( i == 0 ) ? "selected" : ""; %>
-        <option value="<%=categories[i].id%>" selected
+        <option value="<%=categories.id%>" selected
           ><%=categories[i].name%>
         </option>
         <% } %>
       </select>
       <br />
-
-      <input id="submitchange" type="submit" value="Submit Changes" /> <br />
       <br />
 
-      <a href="/trivia">Return to Main Trivia Page</a>
+      <input class="trivialinks" type="submit" value="Submit Changes" /> <br />
+      <br />
+
+      <a class="trivialinks" href="/trivia">Return to Main Trivia Page</a>
     </form>
   </body>
 </html>

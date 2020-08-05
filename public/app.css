@@ -17,14 +17,43 @@ h2 {
 
 .trivia {
   text-align: center;
+  background-color: rgb(1, 1, 75);
+}
+
+#triviadiv {
+  background-color: rgb(1, 1, 75);
+}
+
+#question {
+  margin: 1px 100px 1px 100px;
+  background-color: rgb(1, 1, 75);
+}
+
+#edit {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: x-large;
+  background-color: rgb(1, 1, 75);
+}
+
+#editshow {
+  margin-top: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: baseline;
+  font-size: x-large;
+}
+
+#showButton {
+  color: white;
+  background-color: rgb(1, 1, 75);
 }
 
 #correct {
   margin: 10px 35px 10px 1px;
-}
-
-#question {
-  margin: 1px 150px 1px 150px;
 }
 
 #editprofile {
@@ -98,23 +127,16 @@ h2 {
 
 .trivialinks {
   font-size: x-large;
-  background-color: yellow;
+  background-color: rgb(256, 256, 170);
   color: darkgreen;
+  color: rgb(0, 100, 0);
 }
 
 ol {
-  color: darkred;
+  color: lightyellow;
+  font-size: larger;
 }
 
-#edit {
-  display: flex;
-  text-align: center;
-  justify-content: space-evenly;
-  align-items: baseline;
-  font-size: large;
-  background-color: lemonchiffon;
-  margin: 5px 1px 1px 1px;
-}
 #editButton {
   font-size: x-large;
   background-color: honeydew;
@@ -135,9 +157,7 @@ ol {
   width: 100%;
   font-size: larger;
 }
-jtb {
-  text-indent: 100px;
-}
+
 input[type="text"] {
   width: 500px;
 }
