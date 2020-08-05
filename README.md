@@ -1,15 +1,20 @@
-## Deere Project 2 Starter Code
+## Trivia Database Application
 
-## Set Up
+## Trivia Application Description
 
-1. Fork and clone this repo
-1. `cd` into the folder and run `npm install`
-1. In the root of your app, `touch .env` and add:
+### User Stories
 
-   ```bash
-   PORT=3000
-   JWT_SECRET=pancakes
-   ```
+1. The application needs to give users access to the Trivia database which can be used in a multiple choice trivia game.
+2. Application should enable the user to log in to use the application.
+3. It needs to enable the user to view a list of trivia questions.
+4. While viewing the list of trivia questions, the user should be able to click on a question to view all the data regarding that specific trivia question.
+5. While viewing the trivia question, the user should have the option to edit and update the question.
+6. Users also need to be able to add a new trivia question.
+7. All trivia questions need to be assigned to a trivia category.
+8. The user should have the ability to delete any specified trivia question.
+
+**Wireframe Images Used In This Project**
+[Project2AddTrivia]
 
 1. Check out your `config/config.json` file. You'll need to create a database called `project2_development`
 1. Sequelize is included in the app. You have a `User` model. Run `db:migrate` to create the `Users` table in your database.
