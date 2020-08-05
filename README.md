@@ -14,7 +14,9 @@
 8. The user should have the ability to delete any specified trivia question.
 
 **Wireframe Images Used In This Project**
-[Project2AddTrivia.png]
+![](Project2LogIn.png)
+![](Project2UserProfile.png)
+![](Project2AddTrivia.png)
 
 1. Check out your `config/config.json` file. You'll need to create a database called `project2_development`
 1. Sequelize is included in the app. You have a `User` model. Run `db:migrate` to create the `Users` table in your database.
