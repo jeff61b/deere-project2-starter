@@ -11,9 +11,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
-      id: {
-        type: Sequelize.INTEGER,
-      },
+
       createdAt: {
         allowNull: false,
         defaultValue: new Date(),
