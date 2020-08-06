@@ -50,50 +50,6 @@ router.get("/:id", function (req, res) {
   });
 });
 
-// // SHOW ROUTE - GET ONE Trivia Question
-// router.get("/:id", function (req, res) {
-//   TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
-//     Category.findAll().then((allCategories) => {
-//       //console.log(allCategories);
-//       console.log("New show route");
-//       console.log(foundQuestion);
-//       //console.log(trivia.categoryId);
-//       res.render("show.ejs", {
-//         trivia: foundQuestion,
-//         categories: allCategories,
-//       });
-//     });
-//   });
-// });
-
-// router.get("/:id", (req, res) => {
-//   console.log("show route");
-//   TriviaModel.findByPk(req.params.id, {
-//     include: [
-//       {
-//         model: Category,
-//       },
-//     ],
-//     attributes: [
-//       "id",
-//       "question",
-//       "answer1",
-//       "answer2",
-//       "answer3",
-//       "answer4",
-//       "correctAnswer",
-//       "categoryId",
-//     ],
-//   }).then((trivia) => {
-//     console.log("render show form");
-//     console.log(trivia.name);
-
-//     res.render("show.ejs", {
-//       trivia: trivia,
-//     });
-//   });
-// });
-
 // Edit
 router.get("/:id/edit", function (req, res) {
   TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
@@ -126,6 +82,7 @@ router.put("/:id", (req, res) => {
     where: { id: req.params.id },
     returning: true,
   }).then((updatedTrivia) => {
+    console.log("Trivia update");
     //  Category.findByPk(req.body.categoryId).then((foundCategory) => {
     //    TriviaModel.findByPk(req.params.id).then((foundQuestion) => {
     //      foundQuestion.addCategory(foundCategory);
