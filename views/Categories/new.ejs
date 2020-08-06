@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+
+  <body>
+    <h1>Trivia Database</h1>
+    <h2>Add a New Trivia Category</h2>
+
+    <form id="addform" action="/trivia" method="POST">
+      Category:
+      <input
+        class="editfields"
+        id="addquestion"
+        type="text"
+        name="category"
+      /><br />
+
+      /><br />
+      <br />
+
+      <br />
+      <br />
+      <input class="trivialinks" type="submit" value="Add" />
+    </form>
+    <br />
+    <div id="addLinks">
+      <a class="trivialinks" href="/categories">Return to Categories Page</a>
+    </div>
+  </body>
+</html>

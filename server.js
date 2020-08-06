@@ -31,6 +31,7 @@ app.use(express.static("public"));
 app.use("/auth", require("./controllers/authController.js"));
 app.use("/trivia", require("./controllers/triviaController.js"));
 app.use("/users", require("./controllers/usersController.js"));
+app.use("/categories", require("./controllers/categoryController.js"));
 
 // HOMEPAGE
 app.get("/", (req, res) => {

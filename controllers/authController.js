@@ -79,9 +79,14 @@ router.post("/login", (req, res) => {
           res.cookie("jwt", token); // SEND A NEW COOKIE TO THE BROWSER TO STORE TOKEN
           res.redirect(`/users/profile/${foundUser.id}`);
         } else {
+          console.log("log-in error");
+          res.render("users/error.ejs");
           return res.sendStatus(400);
         }
       });
+    } else {
+      console.log("log-in error");
+      res.render("users/error.ejs");
     }
   });
 });

@@ -2,6 +2,8 @@
 
 ## Trivia Application Description
 
+This application maintains a database used by a multiple choice trivia game. It enables a user to create a trivia question along with 4 possible answers, including a field to indicate the correct answer. It also enable the user to assign each trivia question to a specific trivia category.
+
 ### User Stories
 
 1. The application needs to give users access to the Trivia database which can be used in a multiple choice trivia game.
@@ -12,39 +14,17 @@
 6. Users also need to be able to add a new trivia question.
 7. All trivia questions need to be assigned to a trivia category.
 8. The user should have the ability to delete any specified trivia question.
+9. When logging in, if the user ID or password is not correct, display an error message and allow the user to return to the login page.
 
 **Wireframe Images Used In This Project**
 ![](Project2LogIn.png)
 ![](Project2UserProfile.png)
 ![](Project2AddTrivia.png)
 
-1. Check out your `config/config.json` file. You'll need to create a database called `project2_development`
-1. Sequelize is included in the app. You have a `User` model. Run `db:migrate` to create the `Users` table in your database.
-1. Run `nodemon` and go to the Homepage: `localhost:3000/`
+### Technical Requirements
 
-![](https://i.imgur.com/uuhrOxQ.png)
-
-<br>
-
-## Routes
-
-You have the following routes available.
-
-#### controllers/authController.js
-
-- GET and POST `localhost:3000/auth/signup`
-- GET and POST `localhost:3000/auth/login`
-- GET `localhost:3000/auth/logout`
-
-#### controllers/usersController.js
-
-- GET `localhost:3000/profile/:id`
-
-<br>
-
-## Additional Resources
-
-- [Fruit App Solution](https://git.generalassemb.ly/jdr-0622/fruit-app-in-class)
-- [Pokemon Express Solution](https://git.generalassemb.ly/jdr-0622/pokemon-express-sequelize6)
-- [Google Routes Spreadsheet](https://docs.google.com/spreadsheets/d/14-LHKXLtEkp_vKEz3qSKjREnrmSyzQ9fimTlmrPsZsQ/edit#gid=0)
-- [JSON Web Tokens](https://jwt.io/)
+1. This application uses html to create the views for the user.
+2. It uses the 7 RESTful routes to perform the full CRUD functions which display, add and maintain the database.
+3. It stores and accesses the data on a Postgres relational database.
+4. It uses Javascript and Sequelize to perform all the database functions.
+5.

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/app.css" />
+    <title>Trivia Categories</title>
+    <style>
+        div.fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed" id="topdivision">
+            <h1 id="categorytitle">Trivia Categories</h1>
+        <nav id="trivianav">
+            <a class="trivialinks" href="/categories/new">Add Category</a>
+            <a class="trivialinks" href="/trivia">Return to Trivia Database</a>
+            <a class="trivialinks" href="/auth/logout">Exit/Log Out</a>
+        </nav>
+        <h4 id="instructions">Click on any line to update that category.</h4>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ol class="trivia">
+        <div name="triviaDiv">
+            <% for (let i = 0; i < category.length; i++) { %>
+            
+            <div">
+                <li id="catLine">
+                    <div id="edit">
+                        <a id="showButton" href="/categories/<%=category[i].id%>"><%=category[i].name%></a>
+                    </div>
+                    <% } %>
+        </div>
+        </ol>
+        </div>
+</body>
+
+</html>
