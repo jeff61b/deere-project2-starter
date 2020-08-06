@@ -2,11 +2,13 @@ const express = require("express");
 const category = require("../models/category");
 const router = express.Router();
 const CategoryModel = require("../models").Category;
-//const TriviaModel = require("../models").TriviaQuestions;
+const TriviaModel = require("../models").TriviaQuestions;
 
 // index route
 router.get("/", (req, res) => {
-  CategoryModel.findAll().then((categoryAll) => {
+  CategoryModel.findAll({
+    order: ["id"],
+  }).then((categoryAll) => {
     res.render("categories/index.ejs", {
       category: categoryAll,
     });
@@ -51,7 +53,7 @@ router.get("/:id/edit", function (req, res) {
   });
 });
 
-// Perform the actual update of the data in the table
+// Perform the actual UPDATE of the data in the table
 router.put("/:id", (req, res) => {
   CategoryModel.update(req.body, {
     where: { id: req.params.id },
@@ -59,12 +61,13 @@ router.put("/:id", (req, res) => {
   }).then((category) => {
     console.log("Update record");
     console.log(req.body);
-    res.redirect("/");
+    res.redirect("/categories");
   });
 });
 
 router.delete("/:id", (req, res) => {
   CategoryModel.destroy({ where: { id: req.params.id } }).then(() => {
+    console.log("delete route" + req.params.id);
     res.redirect("/categories");
   });
 });

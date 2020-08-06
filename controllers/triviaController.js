@@ -16,7 +16,9 @@ router.get("/new", (req, res) => {
 
 // index route
 router.get("/", (req, res) => {
-  TriviaModel.findAll().then((triviaAll) => {
+  TriviaModel.findAll({
+    order: ["id"],
+  }).then((triviaAll) => {
     res.render("index.ejs", {
       trivia: triviaAll,
     });
