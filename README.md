@@ -15,6 +15,7 @@ This application maintains a database used by a multiple choice trivia game. It 
 7. All trivia questions need to be assigned to a trivia category.
 8. The user should have the ability to delete any specified trivia question.
 9. When logging in, if the user ID or password is not correct, display an error message and allow the user to return to the login page.
+10. User needs to see the Categories to which all the trivia questions belong.
 
 **Wireframe Images Used In This Project**
 ![](Project2LogIn.png)
@@ -23,8 +24,9 @@ This application maintains a database used by a multiple choice trivia game. It 
 
 ### Technical Requirements
 
-1. This application uses html to create the views for the user.
+1. This application uses html and extensive CSS code to create the views for the user.
 2. It uses the 7 RESTful routes to perform the full CRUD functions which display, add and maintain the database.
 3. It stores and accesses the data on a Postgres relational database.
 4. It uses Javascript and Sequelize to perform all the database functions.
-5.
+5. It is deployed on Heroku.
+6. There is a many-to-one relationship between the trivia questions and the categories.

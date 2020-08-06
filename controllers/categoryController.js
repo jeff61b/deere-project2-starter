@@ -16,33 +16,47 @@ router.get("/", (req, res) => {
 });
 
 // New route - send empty form
-router.get("/categories", (req, res) => {
-  Category.findAll().then((allCategories) => {
-    console.log("New Route");
-    res.render("categories/new.ejs", {
-      categories: allCategories,
-    });
-  });
+router.get("/new", (req, res) => {
+  res.render("categories/new.ejs");
 });
+
+// router.get("/new", (req, res) => {
+//   Category.findAll().then((allCategories) => {
+//     console.log("New Route");
+//     res.render("new.ejs", {
+//       categories: allCategories,
+//     });
+//   });
+// });
 
 // Add New Category
 router.post("/", (req, res) => {
-  CategoriesModel.create(req.body).then((newCategory) => {
-    console.log("new" + newCategory);
+  CategoryModel.create(req.body).then((newCategory) => {
+    console.log("New Category " + newCategory);
+    console.log("req.body" + req.body);
     res.redirect("/categories");
   });
 });
 
 // SHOW ROUTE - GET ONE Category
 router.get("/:id", function (req, res) {
-  CategoryModel.findByPk(req.params.id).then((foundCategory) => {
-    console.log("New show route");
-    console.log(foundCategory.id);
-    res.render("categories/edit.ejs", {
-      category: foundCategory,
-    });
-  });
+  res.redirect("/categories");
+  //  res.render("categories");
 });
+
+// router.get("/:id", function (req, res) {
+//   res.render("categories/index.ejs");
+// });
+
+// router.get("/:id", function (req, res) {
+//   CategoryModel.findByPk(req.params.id).then((foundCategory) => {
+//     console.log("New show route");
+//     console.log(foundCategory.id);
+//     res.render("categories/edit.ejs", {
+//       category: foundCategory,
+//     });
+//   });
+// });
 
 // Edit
 router.get("/:id/edit", function (req, res) {
