@@ -31,3 +31,5 @@ This application maintains a database used by a multiple choice trivia game. It 
 4. It uses Javascript and Sequelize to perform all the database functions.
 5. It is deployed on Heroku.
 6. There is a many-to-one relationship between the trivia questions and the categories.
+
+**The application is hosted on https://dashboard.heroku.com/apps/jeff-trivia-db and saved to https://github.com/jeff61b/deere-project2-starter**
