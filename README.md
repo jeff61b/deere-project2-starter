@@ -1,4 +1,4 @@
-## Trivia Database Application
+# Trivia Database Application
 
 ## Trivia Application Description
 
