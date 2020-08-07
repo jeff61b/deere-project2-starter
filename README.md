@@ -16,6 +16,7 @@ This application maintains a database used by a multiple choice trivia game. It 
 8. The user should have the ability to delete any specified trivia question.
 9. When logging in, if the user ID or password is not correct, display an error message and allow the user to return to the login page.
 10. User needs to see the Categories to which all the trivia questions belong.
+11. User should have the option to add new categories for trivia questions.
 
 **Wireframe Images Used In This Project**
 ![](Project2LogIn.png)
